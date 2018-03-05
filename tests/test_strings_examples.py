@@ -39,6 +39,20 @@ class TestStringsExamples(unittest.TestCase):
         string2 = "123"
         self.assertRaises(TypeError ,StringsExamples.concat_strings,string1,string2)
 
+    def test_concant_bigstring1(self):
+        string1 = "MasDe10Caracteres"
+        string2 = "adios"
+        self.assertRaises(TypeError, StringsExamples.concat_strings,string1,string2)
+
+    def test_concant_bigstring2(self):
+        string1 = "MasDe10Caracteres"
+        string2 = "adios"
+        self.assertRaises(TypeError, StringsExamples.concat_strings,string1,string2)
+
+    def test_concant_bigstring_both(self):
+        string1 = "MasDe10Caracteres"
+        string2 = "MasDe10Caracteres"
+        self.assertRaises(TypeError, StringsExamples.concat_strings,string1,string2)
 
 
 if __name__ == '__main__':

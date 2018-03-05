@@ -1,0 +1,5 @@
+make test 
+source venv/bin/activate
+venv/bin/coverage run main.py
+venv/bin/coverage report
+venv/bin/coverage html
