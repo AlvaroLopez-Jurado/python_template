@@ -9,15 +9,35 @@ class TestStringsExamples(unittest.TestCase):
         result = StringsExamples.concat_strings(string1, string2)
         assert result == "holaadios"
 
+    def test_concat_numbers(self):
+        string1 = 123
+        string2 = 123
+        self.assertRaises(TypeError, StringsExamples.concat_strings,string1,string2)
+
     def test_concat_number_string(self):
         string1 = 123
         string2 = "adios"
-        resutl = self.assertRaises(Exception ,StringsExamples.concat_strings(string1,string2))
+        self.assertRaises(TypeError ,StringsExamples.concat_strings,string1,string2)
 
     def test_concat_string_number(self):
-        string1 = 123
+        string1 = "adios"
+        string2 = 123
+        self.assertRaises(TypeError ,StringsExamples.concat_strings,string1,string2)
+
+    def test_concat_numbers2(self):
+        string1 = "123"
+        string2 = "123"
+        self.assertRaises(TypeError, StringsExamples.concat_strings,string1,string2)
+
+    def test_concat_number_string2(self):
+        string1 = "123"
         string2 = "adios"
-        resutl = self.assertRaises(Exception ,StringsExamples.concat_strings(string1,string2))
+        self.assertRaises(TypeError ,StringsExamples.concat_strings,string1,string2)
+
+    def test_concat_string_number2(self):
+        string1 = "adios"
+        string2 = "123"
+        self.assertRaises(TypeError ,StringsExamples.concat_strings,string1,string2)
 
 
 
