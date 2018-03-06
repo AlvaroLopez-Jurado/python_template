@@ -1,0 +1,8 @@
+
+Vamos a hacer un programa que concatene strings:
+
+    Requisito 1: Sólo aceptará Strings como inputs
+    Requisito 2: El programa recibirá al menos dos Strings y como máximo 10 Strings
+    Requisito 3: El tamaño máximo de un String de entrada son 10 caracteres
+    Requisito 4: La salida debe de ser la concatenación de los Strings sin espacios.
+

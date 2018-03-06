@@ -22,5 +22,5 @@ You can execute the program using the next command:
 python main.py <param1> <param2>
 
 python main.py abc def
-# abcdef 
+# abcdef
 ```

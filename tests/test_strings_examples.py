@@ -149,6 +149,67 @@ class TestStringsExamples(unittest.TestCase):
         strings = []
         self.assertRaises(TypeError, StringsExamples.concat_strings,strings)
 
+    def test_concat_string_with_space_middle(self):
+        strings = []
+        strings.append("ho la")
+        strings.append("adios")
+        result = StringsExamples.concat_strings(strings)
+        assert result == "holaadios"
+
+    def test_concant_string_with_space_begining(self):
+        strings = []
+        strings.append(" hola")
+        strings.append("adios")
+        result = StringsExamples.concat_strings(strings)
+        assert result == "holaadios"
+
+    def test_concat_string_with_space_end(self):
+        strings = []
+        strings.append("hola ")
+        strings.append("adios")
+        result = StringsExamples.concat_strings(strings)
+        assert result == "holaadios"
+
+    def test_concat_string_with_space_begining_end(self):
+        strings = []
+        strings.append(" hola ")
+        strings.append("adios")
+        result = StringsExamples.concat_strings(strings)
+        assert result == "holaadios"
+
+    def test_concat_number_with_space_middle(self):
+        strings = []
+        strings.append("12 3")
+        strings.append("hola")
+        self.assertRaises(TypeError, StringsExamples.concat_strings,strings)
+
+    def test_concat_number_with_space_begining(self):
+        strings = []
+        strings.append(" 123")
+        strings.append("hola")
+        self.assertRaises(TypeError, StringsExamples.concat_strings,strings)
+
+    def test_concat_number_with_space_begining(self):
+        strings = []
+        strings.append("123 ")
+        strings.append("hola")
+        self.assertRaises(TypeError, StringsExamples.concat_strings,strings)
+
+    def test_concat_string_with_numbers(self):
+        strings = []
+        strings.append("hola123")
+        strings.append("adios")
+        result = StringsExamples.concat_strings(strings)
+        assert result == "hola123adios"
+
+    def test_concat_string_with_number_and_space(self):
+        strings = []
+        strings.append("hola 123")
+        strings.append("adios")
+        result = StringsExamples.concat_strings(strings)
+        assert result == "hola123adios"
+
+
 
 if __name__ == '__main__':
     unittest.main()
