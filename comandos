@@ -1,5 +1,6 @@
-make test 
+make test
 source venv/bin/activate
 venv/bin/coverage run main.py
 venv/bin/coverage report
 venv/bin/coverage html
+nosetests tests/test_strings_examples.py

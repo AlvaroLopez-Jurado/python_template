@@ -4,7 +4,7 @@ class StringsExamples(object):
     @staticmethod
     def concat_strings(strings):
 
-        if(len(strings)<2 or len(strings)>10 ):
+        if(len(strings)< 2 or len(strings)>10 ):
             raise TypeError("Maximo numero de strings 10 y minimo 2")
 
         for x in range(len(strings)):
